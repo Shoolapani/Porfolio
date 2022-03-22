@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Side By side karne ke liye */
+.container {
+  display: flex;
+}
+
+.sidebar {
+  background-color: rgb(180, 177, 177);
+  /* In px Responsiveness is more than vw or vh */
+  width: 200px;
+  font-family: "Fira Sans", sans-serif;
+  height: 100vh;
+}
+
+.sidebar nav {
+  padding: 28px;
+}
+
+.sidebar nav li {
+  list-style: none;
+  font-size: 16px;
+  padding: 18px 3px;
+}
+
+/* Hyper Link remove from sidebar */
+.sidebar nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  /* background-color: yellow; */
+  width: 86vw;
+}
+
+.infoContainer {
+  /* background-color: rgb(202, 9, 128); */
+  height: 65vh;
+  width: 81vw;
+  margin: 81px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.devinfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Source Code Pro", monospace;
+}
+
+.hello {
+  font-size: 50px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.name {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.about {
+  font-size: 35px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.moreabout {
+  margin: 5px;
+  font-size: 20px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+/* Buttom ke liye h */
+.buttons button {
+  padding: 9px 9px;
+  border-radius: 64px;
+  color: white;
+  background-color: midnightblue;
+  font-weight: bold;
+  font-size: 11px;
+  margin: 0px 8px;
+}
+
+/* Hover Effect */
+.buttons button:hover {
+  background-color: white;
+  color: midnightblue;
+}
+
+.devPic {
+  display: flex;
+  height: 65vh;
+}
+
+.contactForm h1 {
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  padding: 6px 3px;
+  margin: 18px 7px;
+}
+
+.contactForm {
+  font-family: "Fira Sans", sans-serif;
+  padding: 20px 17px;
+}
