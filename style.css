@@ -83,7 +83,7 @@
 }
 
 /* Buttom ke liye h */
-.buttons button {
+.btn {
   padding: 9px 9px;
   border-radius: 64px;
   color: white;
@@ -94,10 +94,22 @@
 }
 
 /* Hover Effect */
-.buttons button:hover {
+.btn:hover {
   background-color: white;
   color: midnightblue;
 }
+
+.btn-sm {
+  padding: 8px 9px;
+  border-radius: 70px;
+  color: white;
+  background-color: midnightblue;
+  font-weight: bold;
+  font-size: 11px;
+  margin: 5px 5px;
+}
+
+
 
 .devPic {
   display: flex;
@@ -106,13 +118,41 @@
 
 .contactForm h1 {
   font-family: "Source Code Pro", monospace;
-  text-align: center;
+  /* For making heading in middle */
+  /* text-align: center; */
   padding: 6px 3px;
-  margin: 18px 7px;
+  margin: 16px -3px;
 }
-
 
 .contactForm {
   font-family: "Fira Sans", sans-serif;
-  padding: 20px 17px;
+  padding: 16px 16px;
+}
+
+.contactForm div {
+  padding: 6px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm div input {
+  width: 30vw;
+  padding: 3px;
+  margin: 3px 0px 0px;
+  border-radius: 12px;
+}
+
+#emailHelp {
+  font-size: 10px;
+  color: blue;
+  margin: 2px;
+}
+
+#form-check {
+  flex-direction: row;
+}
+
+#form-check input {
+  width: 25px;
+  margin: 3px 0px;
 }
