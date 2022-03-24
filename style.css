@@ -14,7 +14,7 @@
 .sidebar {
   background-color: rgb(180, 177, 177);
   /* In px Responsiveness is more than vw or vh */
-  width: 200px;
+  /* width: 200px; */
   font-family: "Fira Sans", sans-serif;
   height: 100vh;
 }
@@ -38,6 +38,7 @@
 .main {
   /* background-color: yellow; */
   width: 86vw;
+  padding: 5px;
 }
 
 .infoContainer {
@@ -109,8 +110,6 @@
   margin: 5px 5px;
 }
 
-
-
 .devPic {
   display: flex;
   height: 65vh;
@@ -155,4 +154,88 @@
 #form-check input {
   width: 25px;
   margin: 3px 0px;
+}
+
+.intro h1 {
+  font-family: "Fira Sans", sans-serif;
+  margin: 12px;
+}
+
+.intro p {
+  font-family: "Source Code Pro", monospace;
+  padding: 8px;
+}
+
+.skillContainer {
+  padding: 20px;
+}
+
+.skill {
+  width: 214px;
+  height: 7px;
+  background-color: yellow;
+  border: 2px solid black;
+}
+
+.skillsPic {
+  display: flex;
+  height: 10vh;
+  margin: 4px 0px;
+  padding: 6px;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+}
+
+.hundred {
+  width: 280px;
+  background-color: cornflowerblue;
+}
+
+.fifty {
+  width: 220px;
+  background-color: blue;
+}
+
+.t5 {
+  width: 130px;
+  background-color: black;
+}
+
+.fullSideBar {
+  height: 202vh;
+}
+
+/* Ham Burger */
+.hamburger {
+  position: absolute;
+  cursor: pointer;
+  top: 4px;
+  left: 8px;
+}
+
+.cross {
+  margin-left: 74px;
+  height: 25px;
+  width: 29px;
+  padding: 4px;
+}
+
+.ham {
+  height: 25px;
+  width: 29px;
+  padding: 4px;
+}
+
+@media (max-width: 2400px) {
+  * {
+    /* background-color: rgb(54, 3, 3); */
+  }
+
+  /* .sidebar {
+    transform: translate(-204px, 0px);
+    position: absolute;
+  } */
 }
