@@ -84,52 +84,20 @@
                 >I want to work with you on a project with me.</label
               >
             </div>
-            <button type="submit" class="btn btn-sm">Submit</button>
+            <button type="submit" class="btn btn-sm" onclick='sendEmail()'>Submit</button>
           </form>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
     <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendMail() {
-        var name = $("clientName").val();
-        var email = $("clientEmail").val();
-        var phone = $("clientPhone").val();
-        var mess = $("message").val();
-        var Body =
-          "clientName: " +
-          name +
-          "<br>clientEmail: " +
-          email +
-          "<br>clientPhone:  " +
-          phone +
-          "<br>message: " +
-          mess;
-      }
-
-      Email.send({
-        SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
-        // Host: "smtp.gmail.com",
-        // Username: "satyamkumarjha040@gmail.com",
-        // Password: "m@y@nkjh@",
-        To: "satyamkrjha040@gmail.com",
-        From: "satyamkumarjha040@gmail.com",
-        Subject: "New Query in Contact Form :" + name,
-        Body: Body
-      }).then((message) => {
-        if (message == "OK") {
-          alert("Your mail sent");
-        } else {
-          console.error(message);
-          alert("There error in sending message");
-        }
-      });
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("k5_Tx3n6b1-8zWGY1");
+      })();
     </script>
   </body>
 </html>

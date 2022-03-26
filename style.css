@@ -281,3 +281,14 @@ form textarea {
   border-radius: 12px;
   font-family: "Fira Sans", sans-serif;
 }
+
+/* Follow me */
+.follow {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.socialSize {
+  height: 20vh;
+  width: 20vw;
+}
