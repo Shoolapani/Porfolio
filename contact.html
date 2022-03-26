@@ -31,35 +31,52 @@
         <div class="contactForm">
           <h1>Contact with me for Work/General Enquiries</h1>
           <!-- Copied from Bootstrap form section-->
-          <form>
+          <!-- On submit call emailSend function -->
+          <form action="javascript:sendMail()" method="post">
             <div class="mb-3">
-              <label for="clientName" class="form-label">Name</label>
+              <!-- <label for="clientName" class="form-label">Name</label> -->
+              <!-- For Box me show use placeholder & required-->
               <input
-                type="Name"
+                type="text"
                 class="form-control"
                 id="clientName"
                 aria-describedby="nameHelp"
+                placeholder="Your Name"
+                required=""
               />
             </div>
             <div class="mb-3">
-              <label for="clientEmail" class="form-label">Email address</label>
+              <!-- <label for="clientEmail" class="form-label">Email address</label> -->
               <input
                 type="email"
                 class="form-control"
                 id="clientEmail"
                 aria-describedby="emailHelp"
+                placeholder="Email id"
+                required=""
               />
               <div id="emailHelp" class="form-text">
                 Note: We'll never share your email & phone with anyone else.
               </div>
             </div>
             <div class="mb-3Phone">
-              <label for="clinetPhone" class="form-label">Phone</label>
-              <input type="password" class="form-control" id="clinetPhone" />
+              <!-- <label for="clinetPhone" class="form-label">Phone</label> -->
+              <input
+                type="text"
+                class="form-control"
+                id="clientPhone"
+                placeholder="Phone no."
+                required=""
+              />
             </div>
             <div class="mb-3Enquiry">
-              <label for="clinetEnquiry" class="form-label">Enquiry</label>
-              <input type="Enquiry" class="form-control" id="clinetEnquiry" />
+              <!-- <label for="clinetEnquiry" class="form-label">Enquiry</label> -->
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="  Please Enter Message for me."
+                required=""
+              ></textarea>
             </div>
             <div class="mb-3" id="form-check">
               <input type="checkbox" class="form-check-input" id="isClient" />
@@ -73,5 +90,46 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendMail() {
+        var name = $("clientName").val();
+        var email = $("clientEmail").val();
+        var phone = $("clientPhone").val();
+        var mess = $("message").val();
+        var Body =
+          "clientName: " +
+          name +
+          "<br>clientEmail: " +
+          email +
+          "<br>clientPhone:  " +
+          phone +
+          "<br>message: " +
+          mess;
+      }
+
+      Email.send({
+        SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+        // Host: "smtp.gmail.com",
+        // Username: "satyamkumarjha040@gmail.com",
+        // Password: "m@y@nkjh@",
+        To: "satyamkrjha040@gmail.com",
+        From: "satyamkumarjha040@gmail.com",
+        Subject: "New Query in Contact Form :" + name,
+        Body: Body
+      }).then((message) => {
+        if (message == "OK") {
+          alert("Your mail sent");
+        } else {
+          console.error(message);
+          alert("There error in sending message");
+        }
+      });
+    </script>
   </body>
 </html>

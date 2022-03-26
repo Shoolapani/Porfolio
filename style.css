@@ -101,6 +101,7 @@
   font-weight: bold;
   font-size: 1.5em;
   margin: 0px 8px;
+  cursor: pointer;
 }
 
 /* Hover Effect */
@@ -117,6 +118,7 @@
   font-weight: bold;
   font-size: 1em;
   margin: 5px 5px;
+  cursor: pointer;
 }
 
 .devPic {
@@ -135,6 +137,7 @@
 .contactForm {
   font-family: "Fira Sans", sans-serif;
   padding: 16px 16px;
+  cursor: initial;
 }
 
 .contactForm div {
@@ -231,15 +234,15 @@
 }
 
 .cross {
-  margin-left: 125px;
-  height: 25px;
-  width: 29px;
-  padding: 4px;
+  margin-left: 134px;
+  height: 20px;
+  width: 20px;
+  padding: 2px;
 }
 
 .ham {
-  height: 25px;
-  width: 29px;
+  height: 20px;
+  width: 20px;
   padding: 4px;
 }
 
@@ -248,6 +251,7 @@
   position: absolute;
 }
 
+/* Media query for width 1000px */
 @media (max-width: 1000px) {
   * {
     /* background-color: rgb(54, 3, 3); */
@@ -269,5 +273,11 @@
     font-size: 12px;
     padding-top: 5px;
   }
-  
+}
+
+/* For textarea in Message me in contact form */
+form textarea {
+  margin: 5px;
+  border-radius: 12px;
+  font-family: "Fira Sans", sans-serif;
 }
