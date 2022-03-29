@@ -179,8 +179,9 @@
 }
 
 .intro p {
-  font-family: "Source Code Pro", monospace;
-  padding: 8px;
+  /* font-family: "Source Code Pro", monospace; */
+  font-family: "Fira Sans", sans-serif;
+  padding: 10px;
 }
 
 .skillContainer {
@@ -282,13 +283,45 @@ form textarea {
   font-family: "Fira Sans", sans-serif;
 }
 
-/* Follow me */
-.follow {
+Follow me .follow {
   padding: 20px;
   margin-top: 20px;
 }
 
-.socialSize {
-  height: 20vh;
-  width: 20vw;
+/* Follow me Customization */
+.git {
+}
+
+.followMe {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 80px;
+}
+
+.socialMedia {
+  cursor: pointer;
+  padding: 20px;
+  margin-left: 25vw;
+}
+
+.linkedin_socialSize {
+  /* padding: 10px; */
+  height: 5em;
+  width: 5em;
+}
+
+.git {
+  height: 5em;
+  padding: 5px;
+  width: 5em;
+}
+
+.leetcode_socialSize {
+  /* padding: 10px; */
+  height: 5em;
+  width: 5em;
 }

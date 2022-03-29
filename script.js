@@ -18,14 +18,17 @@ document.querySelector(".hamburger").addEventListener("click", () => {
   }
 });
 
-function sendEmail(params) {
+function sendEmail() {
   var temParams = {
-    from_name:document.getElementById("clientName").value,
-    to_name:(document.getElementById("clientEmail").value),
-    message:document.getElementById("message").value
-  }
-  emailjs.send('service_uw7463w','template_fpz079d',temParams)
-  .then(function(res){
-    console.log("Success",res.status);
-  })
+    from_name: document.getElementById("clientName").value,
+    to_name: document.getElementById("clientEmail").value,
+    message: document.getElementById("message").value,
+  };
+  emailjs
+    .send("service_uw7463w", "template_fpz079d", temParams)
+    .then(function (res) {
+      console.log("Success", res.status);
+      alert("Message Successfully sent");
+      window.location.reload(false);
+    });
 }
