@@ -22,13 +22,14 @@ function sendEmail() {
   var temParams = {
     from_name: document.getElementById("clientName").value,
     to_name: document.getElementById("clientEmail").value,
+    phone_no: document.getElementById("clientPhone").value,
     message: document.getElementById("message").value,
   };
   emailjs
     .send("service_uw7463w", "template_fpz079d", temParams)
     .then(function (res) {
       console.log("Success", res.status);
-      alert("Message Successfully sent");
       window.location.reload(false);
+      alert("Message sent Successfully");
     });
 }
