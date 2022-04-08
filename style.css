@@ -304,6 +304,7 @@ Follow me .follow {
 
 .socialMedia {
   cursor: pointer;
+  justify-content: center;
   padding: 20px;
   margin-left: 25vw;
 }
